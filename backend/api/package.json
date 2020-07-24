@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "seed": "babel-node src/setup/server/seeder.js",
-    "setup": "npm install && npm run seed",
+    "setup": "yarn && yarn run seed",
     "start": "nodemon src/index.js --exec babel-node",
-    "start:prod": "npm run build:prod && npm run start:server",
+    "start:prod": "yarn run build:prod && yarn run start:server",
     "build:prod": "babel src -s -D -d build",
     "start:server": "node build/index.js"
   },
